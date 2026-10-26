@@ -25,7 +25,7 @@ window.tailwind.config = {
     }
 };
 
-// TRANSLATION DICTIONARY
+// TRANSLATION DICTIONARY FOR UI LABELS
 const translations = {
     en: {
         headerTitle: "Al-Hikmah Journal",
@@ -737,7 +737,7 @@ const translations = {
         lblTotalRetrieved: "کل حاصل کردہ",
         lblTotalSaved: "کل محفوظ شدہ",
         lblActiveTheme: "فعال موڈ",
-        lblSystemStatus: "سسٹم کی حالت",
+        lblSystemStatus: "سستم کی حالت",
         thTimestamp: "وقت",
         thAction: "کارروائی / واقعہ",
         thDomain: "شعبہ",
@@ -771,7 +771,8 @@ const translations = {
     }
 };
 
-// EXTENDED KNOWLEDGE DATABASE
+// MULTI-LANGUAGE KNOWLEDGE DATABASE
+// NOTE: All Qur'an quotes maintain their sacred Arabic text across all languages, while Hadiths, Scholars, Science, and Prompts translate dynamically.
 const knowledgeDatabase = [
     {
         id: "pair-1",
@@ -779,15 +780,56 @@ const knowledgeDatabase = [
         era: "7",
         inscription: {
             arabic: "يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ",
-            translation: "Allah will raise those who have believed among you and those who were given knowledge, by degrees.",
-            source: "Surah Al-Mujadila (58:11)"
+            // Qur'an quote stays strictly in Arabic across all language settings
+            translations: {
+                en: "يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ",
+                ar: "يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ",
+                es: "يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ",
+                fr: "يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ",
+                de: "يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ",
+                tr: "يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ",
+                ur: "يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ"
+            },
+            source: {
+                en: "Surah Al-Mujadila (58:11)",
+                ar: "سورة المجادلة (٥٨:١١)",
+                es: "Sura Al-Mujadila (58:11)",
+                fr: "Sourate Al-Mujadila (58:11)",
+                de: "Sure Al-Mujadila (58:11)",
+                tr: "Mücadele Suresi (58:11)",
+                ur: "سورة المجادلة (58:11)"
+            }
         },
         observation: {
             arabic: "الشُّعَاعُ يَخْرُجُ مِنَ الأَجْسَامِ المَضِيئَةِ إِلَى العَيْنِ فَتَبْصُرُهَا",
-            translation: "Light rays emit from luminous objects to the eye, rather than rays emanating from the eye—establishing the foundations of modern optics and experimental physics.",
-            source: "Ibn al-Haytham (Alhazen), Kitab al-Manazir (Book of Optics, c. 1021 CE)"
+            translations: {
+                en: "Light rays emit from luminous objects to the eye, rather than rays emanating from the eye—establishing the foundations of modern optics and experimental physics.",
+                ar: "تخرج الأشعة الضوئية من الأجسام المضيئة إلى العين فتُبصرها، مما أرسى قواعد علم البصريات الحديث والفيزياء التجريبية.",
+                es: "Los rayos de luz se emiten desde objetos luminosos hacia el ojo, en lugar de emanar del ojo, estableciendo las bases de la óptica moderna y la física experimental.",
+                fr: "Les rayons lumineux sont émis par les objets lumineux vers l'œil, établissant ainsi les bases de l'optique moderne et de la physique expérimentale.",
+                de: "Lichtstrahlen werden von leuchtenden Objekten zum Auge ausgesendet, was die Grundlagen der modernen Optik und experimentellen Physik legte.",
+                tr: "Işık ışınları gözden çıkmak yerine parlak nesnelerden göze gelir ve böylece modern optik ve deneysel fiziğin temelleri atılır.",
+                ur: "روشنائی کی شعاعیں آنکھ سے نکلنے کے بجائے روشن اجسام سے آنکھ کی طرف آتی ہیں، جس نے جدید بصریات اور تجرباتی طبیعیات کی بنیاد رکھی۔"
+            },
+            source: {
+                en: "Ibn al-Haytham (Alhazen), Kitab al-Manazir (Book of Optics, c. 1021 CE)",
+                ar: "ابن الهيثم، كتاب المناظر (تاريخ ١٠٢١ م)",
+                es: "Ibn al-Haytham (Alhazen), Kitab al-Manazir (Libro de Óptica, c. 1021 d.C.)",
+                fr: "Ibn al-Haytham (Alhazen), Kitab al-Manazir (Traité d'optique, c. 1021 ap. J.-C.)",
+                de: "Ibn al-Haytham (Alhazen), Kitab al-Manazir (Buch der Optik, ca. 1021 n. Chr.)",
+                tr: "İbn el-Haysem, Kitab el-Manazir (Optik Kitabı, m. 1021)",
+                ur: "ابن الہیثم، کتاب المناظر (بصریات کی کتاب، 1021ء)"
+            }
         },
-        prompt: "How does the Qur'anic imperative to observe nature inspire Ibn al-Haytham's rigorous experimental method in optics?"
+        prompts: {
+            en: "How does the Qur'anic imperative to observe nature inspire Ibn al-Haytham's rigorous experimental method in optics?",
+            ar: "كيف ألهم الأمر القرآني بتدبر الطبيعة منهج ابن الهيثم التجريبي الدقيق في علم البصريات؟",
+            es: "¿Cómo inspiró el imperativo coránico de observar la naturaleza el riguroso método experimental de Ibn al-Haytham en óptica?",
+            fr: "Comment l'impératif coranique d'observer la nature a-t-il inspiré la méthode expérimentale rigoureuse d'Ibn al-Haytham en optique ?",
+            de: "Wie inspirierte der koranische Auftrag zur Naturbeobachtung Ibn al-Haythams strenge experimentelle Methode in der Optik?",
+            tr: "Kuran'ın doğayı gözlemleme emri, İbn el-Haysem'in optikteki titiz deneysel yöntemine nasıl ilham verdi?",
+            ur: "کائنات کا مشاہدہ کرنے کے قرآنی حکم نے ابن الہیثم کے بصریات میں جامع تجرباتی طریقہ کار کو کیسے متحرک کیا؟"
+        }
     },
     {
         id: "pair-2",
@@ -795,31 +837,112 @@ const knowledgeDatabase = [
         era: "7",
         inscription: {
             arabic: "طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ",
-            translation: "Seeking knowledge is an obligation upon every Muslim.",
-            source: "Sunan Ibn Majah, Hadith 224"
+            translations: {
+                en: "Seeking knowledge is an obligation upon every Muslim.",
+                ar: "طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ",
+                es: "La búsqueda del conocimiento es una obligación para todo musulmán.",
+                fr: "La recherche du savoir est une obligation pour tout musulman.",
+                de: "Das Streben nach Wissen ist eine Pflicht für jeden Muslim.",
+                tr: "İlim öğrenmek her Müslümana farzdır.",
+                ur: "علم حاصل کرنا ہر مسلمان پر فرض ہے۔"
+            },
+            source: {
+                en: "Sunan Ibn Majah, Hadith 224",
+                ar: "سنن ابن ماجه، حديث ٢٢٤",
+                es: "Sunan Ibn Majah, Hadiz 224",
+                fr: "Sunan Ibn Majah, Hadith 224",
+                de: "Sunan Ibn Majah, Hadith 224",
+                tr: "Sünen-i İbn Mâce, Hadis 224",
+                ur: "سنن ابن ماجہ، حدیث 224"
+            }
         },
         observation: {
             arabic: "جَامِعَةُ القَرَوِيِّينَ بِنَاءٌ أُسِّسَ عَلَى التَّقْوَى لِنَشْرِ العُلُومِ وَالفُنُونِ",
-            translation: "Fatima al-Fihri founded the University of Al-Qarawiyyin in Fez, Morocco (859 CE), recognized as the oldest continually operating degree-granting university in the world.",
-            source: "Historical Annals of Maghreb Architecture & Higher Learning"
+            translations: {
+                en: "Fatima al-Fihri founded the University of Al-Qarawiyyin in Fez, Morocco (859 CE), recognized as the oldest continually operating degree-granting university in the world.",
+                ar: "أسست فاطمة الفهرية جامعة القرويين في فاس بالمغرب (٨٥٩ م)، والتي تُعد أقدم جامعة تمنح الدرجات العلمية بشكل مستمر في العالم.",
+                es: "Fatima al-Fihri fundó la Universidad de Al-Qarawiyyin en Fez, Marruecos (859 d.C.), reconocida como la universidad en funcionamiento continuo más antigua del mundo.",
+                fr: "Fatima al-Fihri a fondé l'Université Al-Qarawiyyin à Fès, Maroc (859 ap. J.-C.), reconnue comme la plus ancienne université en activité continue au monde.",
+                de: "Fatima al-Fihri gründete 859 n. Chr. die Universität Al-Qarawiyyin in Fès, Marokko, die als älteste kontinuierlich betriebene Universität der Welt gilt.",
+                tr: "Fatıma el-Fihri, Fas'ın Fes kentinde El-Karaviyyin Üniversitesi'ni kurdu (m. 859); burası dünyanın halen çalışan en eski üniversitesi kabul edilir.",
+                ur: "فاطمہ الفہری نے 859ء میں فاس، مراکش میں جامعہ القرویین کی بنیاد رکھی، جسے دنیا کی سب سے پرانی مسلسل فعال یونیورسٹی تسلیم کیا جاتا ہے۔"
+            },
+            source: {
+                en: "Historical Annals of Maghreb Architecture & Higher Learning",
+                ar: "المؤلفات التاريخية للعمارة والتعليم العالي بالمغرب العربي",
+                es: "Anales Históricos de la Arquitectura del Magreb y la Educación Superior",
+                fr: "Annales historiques de l'architecture du Maghreb et de l'enseignement supérieur",
+                de: "Historische Annalen der Maghreb-Architektur und Hochschulbildung",
+                tr: "Mağrip Mimarisi ve Yükseköğrenim Tarihi Yıllıkları",
+                ur: "شمالی افریقہ کی طرزِ تعمیر اور اعلیٰ تعلیم کی تاریخی دستاویزات"
+            }
         },
-        prompt: "In what ways did the universal mandate to seek knowledge pave the way for institutionalized higher education in the Islamic world?"
+        prompts: {
+            en: "In what ways did the universal mandate to seek knowledge pave the way for institutionalized higher education in the Islamic world?",
+            ar: "كيف مهد الأمر العالمي بطلب العلم الطريق لمؤسسات التعليم العالي في العالم الإسلامي؟",
+            es: "¿De qué maneras el mandato universal de buscar el conocimiento allanó el camino para la educación superior institucionalizada en el mundo islámico?",
+            fr: "De quelles manières le mandat universel de recherche du savoir a-t-il ouvert la voie à un enseignement supérieur institutionnalisé dans le monde islamique ?",
+            de: "Inwiefern ebnete der universelle Auftrag zum Wissenserwerb den Weg für die institutionalisierte Hochschulbildung in der islamischen Welt?",
+            tr: "Evrensel ilim öğrenme emri, İslam dünyasında kurumsallaşmış yükseköğrenimin önünü nasıl açtı?",
+            ur: "علم حاصل کرنے کے عالمی حکم نے اسلامی دنیا میں باقاعدہ اعلیٰ تعلیم کے قیام کا راستہ کیسے ہموار کیا؟"
+        }
     },
     {
         id: "pair-3",
-        domain: "science",
+        domain: "quran",
         era: "9",
         inscription: {
             arabic: "إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالأَرْضِ وَاخْتِلافِ اللَّيْلِ وَالنَّهَارِ لَآيَاتٍ لِّأُولِي الأَلْبَابِ",
-            translation: "Indeed, in the creation of the heavens and the earth and the alternation of night and day are signs for those of understanding.",
-            source: "Surah Ali 'Imran (3:190)"
+            // Qur'an quote stays strictly in Arabic across all language settings
+            translations: {
+                en: "إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالأَرْضِ وَاخْتِلافِ اللَّيْلِ وَالنَّهَارِ لَآيَاتٍ لِّأُولِي الأَلْبَابِ",
+                ar: "إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالأَرْضِ وَاخْتِلافِ اللَّيْلِ وَالنَّهَارِ لَآيَاتٍ لِّأُولِي الأَلْبَابِ",
+                es: "إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالأَرْضِ وَاخْتِلافِ اللَّيْلِ وَالنَّهَارِ لَآيَاتٍ لِّأُولِي الأَلْبَابِ",
+                fr: "إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالأَرْضِ وَاخْتِلافِ اللَّيْلِ وَالنَّهَارِ لَآيَاتٍ لِّأُولِي الأَلْبَابِ",
+                de: "إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالأَرْضِ وَاخْتِلافِ اللَّيْلِ وَالنَّهَارِ لَآيَاتٍ لِّأُولِي الأَلْبَابِ",
+                tr: "إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالأَرْضِ وَاخْتِلافِ اللَّيْلِ وَالنَّهَارِ لَآيَاتٍ لِّأُولِي الأَلْبَابِ",
+                ur: "إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالأَرْضِ وَاخْتِلافِ اللَّيْلِ وَالنَّهَارِ لَآيَاتٍ لِّأُولِي الأَلْبَابِ"
+            },
+            source: {
+                en: "Surah Ali 'Imran (3:190)",
+                ar: "سورة آل عمران (٣:١٩٠)",
+                es: "Sura Ali 'Imran (3:190)",
+                fr: "Sourate Ali 'Imran (3:190)",
+                de: "Sure Ali 'Imran (3:190)",
+                tr: "Âl-i İmrân Suresi (3:190)",
+                ur: "سورة آل عمران (3:190)"
+            }
         },
         observation: {
             arabic: "الْجَبْرُ هُوَ عِلْمُ الْمُقَابَلَةِ وَالتَّسْوِيَةِ بَيْنَ الْمَعَادَلاتِ",
-            translation: "Al-Khwarizmi formulated algebra as a distinct mathematical discipline in Baghdad (c. 820 CE), combining algorithmic procedures with geometric proofs.",
-            source: "Al-Khwarizmi, Al-Kitab al-Mukhtasar fi Hisab al-Jabr wa'l-Muqabala"
+            translations: {
+                en: "Al-Khwarizmi formulated algebra as a distinct mathematical discipline in Baghdad (c. 820 CE), combining algorithmic procedures with geometric proofs.",
+                ar: "صاغ الخوارزمي علم الجبر كفرع رياضي مستقل في بغداد (نحو ٨٢٠ م)، رابطاً بين الخطوات الخوارزمية والبراهين الهندسية.",
+                es: "Al-Khwarizmi formuló el álgebra como una disciplina matemática independiente en Bagdad (c. 820 d.C.), combinando procedimientos algorítmicos con pruebas geométricas.",
+                fr: "Al-Khwarizmi a formulé l'algèbre en tant que discipline mathématique distincte à Bagdad (c. 820 ap. J.-C.), combinant algorithmes et démonstrations géométriques.",
+                de: "Al-Khwarizmi formulierte die Algebra um 820 n. Chr. in Baghdad als eigenständige mathematische Disziplin mit algorithmischen Verfahren.",
+                tr: "Harezmi, Bağdat'ta (m. 820) cebiri müstakil bir matematik dalı olarak sistemleştirdi.",
+                ur: "الخوارزمی نے بغداد میں (820ء) الجبرا کو ایک الگ ریاضیاتی علم کے طور پر مرتب کیا۔"
+            },
+            source: {
+                en: "Al-Khwarizmi, Al-Kitab al-Mukhtasar fi Hisab al-Jabr wa'l-Muqabala",
+                ar: "الخوارزمي، الكتاب المختصر في حساب الجبر والمقابلة",
+                es: "Al-Khwarizmi, Al-Kitab al-Mukhtasar fi Hisab al-Jabr wa'l-Muqabala",
+                fr: "Al-Khwarizmi, Al-Kitab al-Mukhtasar fi Hisab al-Jabr wa'l-Muqabala",
+                de: "Al-Khwarizmi, Al-Kitab al-Mukhtasar fi Hisab al-Jabr wa'l-Muqabala",
+                tr: "Harezmi, El-Kitâbü'l-Muhtasar fî Hısâbi'l-Cebri ve'l-Mukâbele",
+                ur: "الخوارزمی، الکتاب المختصر فی حساب الجبر والمقابلہ"
+            }
         },
-        prompt: "How did Al-Khwarizmi's work bridge practical problem-solving (inheritance, land survey) with abstract mathematical reasoning?"
+        prompts: {
+            en: "How did Al-Khwarizmi's work bridge practical problem-solving (inheritance, land survey) with abstract mathematical reasoning?",
+            ar: "كيف ربطت أعمال الخوارزمي بين الحلول العملية (المواريث، مساحة الأراضي) والتفكير الرياضي المجرد؟",
+            es: "¿Cómo vinculó el trabajo de Al-Khwarizmi la resolución práctica de problemas con el razonamiento matemático abstracto?",
+            fr: "Comment les travaux d'Al-Khwarizmi ont-ils relié la résolution pratique de problèmes au raisonnement mathématique abstrait ?",
+            de: "Wie verband Al-Khwarizmis Werk praktische Problemlösung mit abstrakter mathematischer Logik?",
+            tr: "Harezmi'nin çalışmaları pratik problem çözümü ile soyut matematiksel akıl yürütmeyi nasıl birleştirdi?",
+            ur: "الخوارزمی کے کام نے عملی مسائل کے حل کو تجریدی ریاضیاتی منطق کے ساتھ کیسے جوڑا؟"
+        }
     },
     {
         id: "pair-4",
@@ -827,15 +950,56 @@ const knowledgeDatabase = [
         era: "10",
         inscription: {
             arabic: "وَجَعَلْنَا مِنَ الْمَاءِ كُلَّ شَيْءٍ حَيٍّ ۖ أَفَلَا يُؤْمِنُونَ",
-            translation: "And We made from water every living thing. Will they not then believe?",
-            source: "Surah Al-Anbiya (21:30)"
+            // Qur'an quote stays strictly in Arabic across all language settings
+            translations: {
+                en: "وَجَعَلْنَا مِنَ الْمَاءِ كُلَّ شَيْءٍ حَيٍّ ۖ أَفَلَا يُؤْمِنُونَ",
+                ar: "وَجَعَلْنَا مِنَ الْمَاءِ كُلَّ شَيْءٍ حَيٍّ ۖ أَفَلَا يُؤْمِنُونَ",
+                es: "وَجَعَلْنَا مِنَ الْمَاءِ كُلَّ شَيْءٍ حَيٍّ ۖ أَفَلَا يُؤْمِنُونَ",
+                fr: "وَجَعَلْنَا مِنَ الْمَاءِ كُلَّ شَيْءٍ حَيٍّ ۖ أَفَلَا يُؤْمِنُونَ",
+                de: "وَجَعَلْنَا مِنَ الْمَاءِ كُلَّ شَيْءٍ حَيٍّ ۖ أَفَلَا يُؤْمِنُونَ",
+                tr: "وَجَعَلْنَا مِنَ الْمَاءِ كُلَّ شَيْءٍ حَيٍّ ۖ أَفَلَا يُؤْمِنُونَ",
+                ur: "وَجَعَلْنَا مِنَ الْمَاءِ كُلَّ شَيْءٍ حَيٍّ ۖ أَفَلَا يُؤْمِنُونَ"
+            },
+            source: {
+                en: "Surah Al-Anbiya (21:30)",
+                ar: "سورة الأنبياء (٢١:٣٠)",
+                es: "Sura Al-Anbiya (21:30)",
+                fr: "Sourate Al-Anbiya (21:30)",
+                de: "Sure Al-Anbiya (21:30)",
+                tr: "Enbiyâ Suresi (21:30)",
+                ur: "سورة الأنبياء (21:30)"
+            }
         },
         observation: {
             arabic: "الْمَاءُ أُصُولُ الْحَيَاةِ وَتَرْكِيبِ الْأَبْدَانِ وَطَهَارَةُ الأَرْوَاحِ",
-            translation: "Ibn Sina (Avicenna) documented public health, water sanitation, and contagious pathogen isolation principles in 'The Canon of Medicine'.",
-            source: "Ibn Sina (Avicenna), Al-Qanun fi al-Tibb (The Canon of Medicine, c. 1025 CE)"
+            translations: {
+                en: "Ibn Sina (Avicenna) documented public health, water sanitation, and contagious pathogen isolation principles in 'The Canon of Medicine'.",
+                ar: "وثق ابن سينا مبادئ الصحة العامة، وتنقيتها، وعزل الأمراض المعدية في كتابه 'القانون في الطب'.",
+                es: "Ibn Sina (Avicena) documentó la salud pública, el saneamiento del agua y el aislamiento de patógenos contagiosos en 'El Canon de Medicina'.",
+                fr: "Ibn Sina (Avicenne) a documenté la santé publique, l'assainissement de l'eau et le confinement des agents pathogènes dans 'Le Canon de la médecine'.",
+                de: "Ibn Sina (Avicenna) dokumentierte Prinzipien der öffentlichen Gesundheit und Seuchenbekämpfung im 'Kanon der Medizin'.",
+                tr: "İbn-i Sînâ, 'El-Kânûn fi't-Tıbb' adlı eserinde toplum sağlığı, su hijyeni ve bulaşıcı hastalık karantinası ilkelerini kaydetti.",
+                ur: "ابن سینا نے 'القانون فی الطب' میں عوامی صحت، پانی کی صفائی اور متعدی بیماریوں کے قرنطینہ کے اصول مرتب کیے۔"
+            },
+            source: {
+                en: "Ibn Sina (Avicenna), Al-Qanun fi al-Tibb (The Canon of Medicine, c. 1025 CE)",
+                ar: "ابن سينا، القانون في الطب (تاريخ ١٠٢٥ م)",
+                es: "Ibn Sina (Avicena), Al-Qanun fi al-Tibb (El Canon de Medicina, c. 1025 d.C.)",
+                fr: "Ibn Sina (Avicenne), Al-Qanun fi al-Tibb (Le Canon de la médecine, c. 1025 ap. J.-C.)",
+                de: "Ibn Sina (Avicenna), Al-Qanun fi al-Tibb (Der Kanon der Medizin, ca. 1025 n. Chr.)",
+                tr: "İbn-i Sînâ, El-Kânûn fi't-Tıbb (Tıp Kanunu, m. 1025)",
+                ur: "ابن سینا، القانون فی الطب (1025ء)"
+            }
         },
-        prompt: "How did the sacred view of water as life's baseline inform classical Islamic advancements in hygiene, hydrology, and medical science?"
+        prompts: {
+            en: "How did the sacred view of water as life's baseline inform classical Islamic advancements in hygiene, hydrology, and medical science?",
+            ar: "كيف أثرت النظرة المقدسة للماء كأصل للحياة في تطور علوم النظافة، والهيدرولوجيا، والطب في الحضارة الإسلامية؟",
+            es: "¿Cómo influyó la visión sagrada del agua como base de la vida en los avances islámicos clásicos en higiene, hidrología y medicina?",
+            fr: "Comment la vision sacrée de l'eau en tant que fondement de la vie a-t-elle guidé les progrès islamiques en hygiène, hydrologie et médecine ?",
+            de: "Wie beeinflusste das heilige Verständnis von Wasser als Lebensgrundlage klassische islamische Fortschritte in Hygiene und Medizin?",
+            tr: "Suyun yaşamın kaynağı olarak kutsal kabul edilmesi, İslam tıbbı ve hijyenindeki gelişmelere nasıl yön verdi?",
+            ur: "پانی کو زندگی کی بنیادی ضرورت ماننے کے تصور نے اسلامی ادوار میں حفظانِ صحت اور طب کے علوم کو کیسے فروغ دیا؟"
+        }
     },
     {
         id: "pair-5",
@@ -843,15 +1007,55 @@ const knowledgeDatabase = [
         era: "11",
         inscription: {
             arabic: "العِلْمُ بِلا عَمَلٍ جُنُونٌ ، وَالعَمَلُ بِلا عِلْمٍ لا يَكُونُ",
-            translation: "Knowledge without action is madness, and action without knowledge is non-existent.",
-            source: "Imam Al-Ghazali, Ayyuha al-Walad (Letter to a Disciple)"
+            translations: {
+                en: "Knowledge without action is madness, and action without knowledge is non-existent.",
+                ar: "العِلْمُ بِلا عَمَلٍ جُنُونٌ ، وَالعَمَلُ بِلا عِلْمٍ لا يَكُونُ",
+                es: "El conocimiento sin acción es locura, y la acción sin conocimiento no existe.",
+                fr: "La connaissance sans action est folie, et l'action sans connaissance n'existe pas.",
+                de: "Wissen ohne Handeln ist Wahnsinn, und Handeln ohne Wissen existiert nicht.",
+                tr: "Amelsiz ilim deliliktir, ilimsiz amel ise yok hükmündedir.",
+                ur: "عمل کے بغیر علم دیوانگی ہے، اور علم کے بغیر عمل کا کوئی وجود نہیں۔"
+            },
+            source: {
+                en: "Imam Al-Ghazali, Ayyuha al-Walad (Letter to a Disciple)",
+                ar: "الإمام الغزالي، أيها الولد",
+                es: "Imam Al-Ghazali, Ayyuha al-Walad (Carta a un discípulo)",
+                fr: "Imam Al-Ghazali, Ayyuha al-Walad (Lettre au disciple)",
+                de: "Imam Al-Ghazali, Ayyuha al-Walad (Brief an einen Schüler)",
+                tr: "İmam Gazâlî, Ey Oğul (Eyyühe'l-Veled)",
+                ur: "امام الغزالی، ایہا الولد (نصیحت نامہ)"
+            }
         },
         observation: {
             arabic: "اخْتِرَاعُ الأَدَوَاتِ الْجِرَاحِيَّةِ لِتَصْحِيحِ أَعْطَالِ الْجَسَدِ وَإِنْقَاذِ الأَرْوَاحِ",
-            translation: "Al-Zahrawi (Albucasis) invented over 200 surgical instruments in Cordoba, Andalucia, defining European surgical technique for five centuries.",
-            source: "Al-Zahrawi, Kitab al-Tasrif (c. 1000 CE)"
+            translations: {
+                en: "Al-Zahrawi (Albucasis) invented over 200 surgical instruments in Cordoba, Andalucia, defining European surgical technique for five centuries.",
+                ar: "اخترع الزهراوي أكثر من ٢٠٠ أداة جراحية في قرطبة بالأندلس، والتي شكلت أساس الجراحة الأوروبية لخمسة قرون.",
+                es: "Al-Zahrawi (Albucasis) inventó más de 200 instrumentos quirúrgicos en Córdoba, Andalucía, definiendo la cirugía europea durante cinco siglos.",
+                fr: "Al-Zahrawi (Albucasis) a inventé plus de 200 instruments chirurgicaux à Cordoue, définissant la chirurgie européenne pendant cinq siècles.",
+                de: "Al-Zahrawi (Albucasis) erfand in Córdoba über 200 chirurgische Instrumente, die die europäische Chirurgie fünf Jahrhunderte prägten.",
+                tr: "Zehravî, Kurtuba'da 200'den fazla cerrahi alet icat etti ve Avrupa cerrahisini beş yüzyıl boyunca şekillendirdi.",
+                ur: "الزہراوی نے قرطبہ (اندلس) میں 200 سے زائد جراحی کے آلات ایجاد کیے جنھوں نے پانچ صدیوں تک یورپی جراحی کی رہنمائی کی۔"
+            },
+            source: {
+                en: "Al-Zahrawi, Kitab al-Tasrif (c. 1000 CE)",
+                ar: "الزهراوي، كتاب التصريف لمن عجز عن التأليف (تاريخ ١٠٠٠ م)",
+                es: "Al-Zahrawi, Kitab al-Tasrif (c. 1000 d.C.)",
+                fr: "Al-Zahrawi, Kitab al-Tasrif (c. 1000 ap. J.-C.)",
+                de: "Al-Zahrawi, Kitab al-Tasrif (ca. 1000 n. Chr.)",
+                tr: "Zehravî, Kitâbü't-Tasrîf (m. 1000)",
+                ur: "الزہراوی، کتاب التصریف (1000ء)"
+            }
         },
-        prompt: "How does Al-Ghazali's philosophical mandate for actionable knowledge parallel Al-Zahrawi's practical innovations in surgery?"
+        prompts: {
+            en: "How does Al-Ghazali's philosophical mandate for actionable knowledge parallel Al-Zahrawi's practical innovations in surgery?",
+            ar: "كيف يتوازى مبدأ الغزالي الفلسفي في ربط العلم بالعمل مع ابتكارات الزهراوي التطبيقية في الجراحة؟",
+            es: "¿Cómo se equipara el mandato filosófico de Al-Ghazali sobre el conocimiento práctico con las innovaciones quirúrgicas de Al-Zahrawi?",
+            fr: "En quoi l'exigence philosophique d'Al-Ghazali d'un savoir agissant rejoint-elle les innovations pratiques d'Al-Zahrawi en chirurgie ?",
+            de: "Wie spiegelt sich Al-Ghazalis Grundsatz des angewandten Wissens in Al-Zahrawis praktischen Chirurgie-Innovationen wider?",
+            tr: "Gazâlî'nin faydalı ilim ilkesi ile Zehravî'nin cerrahideki pratik icatları nasıl bir paralellik gösterir?",
+            ur: "علمِ نافع اور عمل کے متعلق الغزالی کا فلسفہ الزہراوی کی جراحی ایجادات سے کیسے مطابقت رکھتا ہے؟"
+        }
     }
 ];
 
@@ -883,6 +1087,41 @@ let historyLogs = JSON.parse(localStorage.getItem('alhikmah_logs') || '[]');
 let quizCurrentIndex = 0;
 let quizScore = 0;
 
+// HELPER: GET LOCALIZED VALUE FOR FIELD
+function getLocalized(fieldObj) {
+    if (!fieldObj) return "";
+    if (typeof fieldObj === 'string') return fieldObj;
+    return fieldObj[currentLang] || fieldObj['en'] || "";
+}
+
+// RENDER ACTIVE PAIR TO CARDS
+function renderCurrentPair() {
+    if (!currentPair) return;
+
+    const inscAr = document.getElementById('inscriptionArabic');
+    const inscTr = document.getElementById('inscriptionTranslation');
+    const inscSrc = document.getElementById('inscriptionSource');
+    
+    const obsAr = document.getElementById('observationArabic');
+    const obsTr = document.getElementById('observationTranslation');
+    const obsSrc = document.getElementById('observationSource');
+    
+    const synthPrompt = document.getElementById('synthesisPromptText');
+
+    if (inscAr) inscAr.textContent = currentPair.inscription.arabic;
+    if (inscTr) inscTr.textContent = getLocalized(currentPair.inscription.translations);
+    if (inscSrc) inscSrc.textContent = getLocalized(currentPair.inscription.source);
+
+    if (obsAr) obsAr.textContent = currentPair.observation.arabic;
+    if (obsTr) obsTr.textContent = getLocalized(currentPair.observation.translations);
+    if (obsSrc) obsSrc.textContent = getLocalized(currentPair.observation.source);
+
+    if (synthPrompt) synthPrompt.textContent = getLocalized(currentPair.prompts);
+
+    updateEquilibriumBar();
+    updateSaveButtonsState();
+}
+
 // LANGUAGE SWITCHER
 function updateLanguageUI() {
     const dict = translations[currentLang] || translations.en;
@@ -910,6 +1149,7 @@ function updateLanguageUI() {
         }
     }
 
+    renderCurrentPair();
     renderFavoritesList();
     renderAuditHistory();
     updateSaveButtonsState();
@@ -959,24 +1199,7 @@ function retrieveKnowledgePair() {
     const randomIndex = Math.floor(Math.random() * filtered.length);
     currentPair = filtered[randomIndex];
 
-    const inscAr = document.getElementById('inscriptionArabic');
-    const inscTr = document.getElementById('inscriptionTranslation');
-    const inscSrc = document.getElementById('inscriptionSource');
-    const obsAr = document.getElementById('observationArabic');
-    const obsTr = document.getElementById('observationTranslation');
-    const obsSrc = document.getElementById('observationSource');
-    const synthPrompt = document.getElementById('synthesisPromptText');
-
-    if (inscAr) inscAr.textContent = currentPair.inscription.arabic;
-    if (inscTr) inscTr.textContent = currentPair.inscription.translation;
-    if (inscSrc) inscSrc.textContent = currentPair.inscription.source;
-    if (obsAr) obsAr.textContent = currentPair.observation.arabic;
-    if (obsTr) obsTr.textContent = currentPair.observation.translation;
-    if (obsSrc) obsSrc.textContent = currentPair.observation.source;
-    if (synthPrompt) synthPrompt.textContent = currentPair.prompt;
-
-    updateEquilibriumBar();
-    updateSaveButtonsState();
+    renderCurrentPair();
     logAuditEvent("PAIR_RETRIEVED", `Retrieved pair ID: ${currentPair.id} (${currentPair.domain})`);
 }
 
@@ -1050,16 +1273,16 @@ function saveCurrentItem(type) {
         itemToSave = {
             id: currentPair.id + '-insc',
             type: dict.badgeTypeInscription || 'Inscription',
-            text: currentPair.inscription.arabic + " — " + currentPair.inscription.translation,
-            source: currentPair.inscription.source,
+            text: currentPair.inscription.arabic + " — " + getLocalized(currentPair.inscription.translations),
+            source: getLocalized(currentPair.inscription.source),
             dateSaved: new Date().toLocaleDateString()
         };
     } else {
         itemToSave = {
             id: currentPair.id + '-obs',
             type: dict.badgeTypeObservation || 'Observation',
-            text: currentPair.observation.arabic + " — " + currentPair.observation.translation,
-            source: currentPair.observation.source,
+            text: currentPair.observation.arabic + " — " + getLocalized(currentPair.observation.translations),
+            source: getLocalized(currentPair.observation.source),
             dateSaved: new Date().toLocaleDateString()
         };
     }
@@ -1374,7 +1597,7 @@ function showToast(message) {
     }, 3000);
 }
 
-// EXPLICIT GLOBAL BINDINGS TO ENSURE HTML INLINE EVENT HANDLERS ALWAYS CALL WORKABLE FUNCTIONS
+// EXPLICIT GLOBAL BINDINGS FOR INLINE EVENT HANDLERS
 window.openArchModal = openArchModal;
 window.closeArchModal = closeArchModal;
 window.openFavoritesModal = openFavoritesModal;
